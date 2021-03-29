@@ -1,12 +1,12 @@
 {
   "name": "stretch-buddy",
   "version": "1.0.0",
-  "description": "A stretching tool build on React Hooks, Express, and Node.js using the Youtube API",
+  "description": "A stretching tool built on React Hooks, Express, and Node.js using the Youtube API",
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server",
-    "build": "webpack --mode development --watch"
+    "build": "webpack --mode development"
   },
   "repository": {
     "type": "git",
