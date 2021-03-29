@@ -8,9 +8,9 @@ RUN npm install
 
 COPY . ./
 
-RUN npm run react-dev
+RUN npm run build
 
 EXPOSE 3000
 EXPOSE 80
 
-CMD [ "node", "server" ]
+CMD [ "npm", "start" ]
