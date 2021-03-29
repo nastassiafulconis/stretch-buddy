@@ -1,8 +1,12 @@
 import React from 'react';
+import Body from './Body.jsx';
 
 const App = () => {
   return (
-    <h1>Welcome to Stretch Buddy!</h1>
+    <React.Fragment>
+      <h1>Welcome to Stretch Buddy!</h1>
+      <Body />
+    </ React.Fragment>
   );
 };
 

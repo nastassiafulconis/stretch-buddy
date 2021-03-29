@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server",
-    "build": "webpack --mode development"
+    "build": "webpack --mode development --watch",
+    "docker-build": "webpack --mode development"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-modal": "^3.12.1"
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",

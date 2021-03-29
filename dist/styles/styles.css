@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.close-modal {
+  border: none;
+  color: none;
+  background: transparent;
+  outline: none;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
