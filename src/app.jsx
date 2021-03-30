@@ -1,11 +1,13 @@
 import React from 'react';
 import Body from './Body.jsx';
+import ImageMap from './ImageMap.jsx';
 
 const App = () => {
   return (
     <React.Fragment>
       <h1>Welcome to Stretch Buddy!</h1>
-      <Body q="Hand Stretch"/>
+      {/* <Body /> */}
+      <ImageMap />
     </ React.Fragment>
   );
 };

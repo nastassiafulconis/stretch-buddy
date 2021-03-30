@@ -1,9 +1,30 @@
+body {
+  height: 500px;
+}
+
+.background {
+  display: block;
+  /* width: 80%; */
+  margin-right: auto;
+  margin-left: auto;
+}
+
 h1 {
   text-align: center;
 }
 
 button:hover {
   cursor: pointer;
+}
+
+button {
+  position: absolute;
+  top: 90%
+}
+
+.test-area {
+  color: red;
+  border: 10px solid red;
 }
 
 .close-modal {
