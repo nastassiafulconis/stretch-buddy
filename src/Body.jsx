@@ -1,30 +1,22 @@
-import React, {useRef, Fragment} from 'react';
-import Video from './Video.jsx';
-import searchYoutube from './utils/searchYoutube.js';
+import React, {Fragment} from 'react';
+import BodyPart from './BodyPart.jsx';
 
-const Body = ({q}) => {
-  const ref = useRef(null);
-
-  const handleClick = () => {
-    searchYoutube.get('/search', {
-      params: {
-        q,
-      }
-    })
-      .then(({data}) => {
-        console.log(data);
-        ref.current.openModal(data.items[0].id.videoId);
-      })
-      .catch((err) => {
-        console.error(`error getting data from api: ${err}`);
-      });
-  }
-
+const Body = () => {
   return (
     <Fragment>
-      <button onClick={handleClick}>Show Modal!</button>
-      <Video ref={ref} name={q}/>
-    </Fragment>
+      <BodyPart name="Neck"/>
+      <BodyPart name="Shoulder"/>
+      <BodyPart name="Solar Plexus"/>
+      <BodyPart name="Diaphragm"/>
+      <BodyPart name="Abs"/>
+      <BodyPart name="Oblinameue"/>
+      <BodyPart name="Armpit"/>
+      <BodyPart name="Hip Flexor"/>
+      <BodyPart name="nameuad"/>
+      <BodyPart name="Forearm"/>
+      <BodyPart name="Hand"/>
+      <BodyPart name="Foot"/>
+    </ Fragment>
   );
 };
 

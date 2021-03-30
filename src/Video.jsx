@@ -38,7 +38,7 @@ const Video = forwardRef(({name}, ref) => {
       <Fragment>
         <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Modal" style={customStyles}>
           <button onClick={closeModal} className="close-modal">X</button>
-          <h2>{name}</h2>
+          <h2>{name} Stretch</h2>
           <iframe
           className="embed-responsive-item"
           src={`https://www.youtube.com/embed/${video}`}
