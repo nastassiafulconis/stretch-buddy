@@ -3,13 +3,13 @@ import Video from './Video.jsx';
 import searchYoutube from './utils/searchYoutube.js';
 import data from './utils/svg.js';
 
-const ImageMap = () => {
+const ImageMap = ({activity}) => {
   const ref = useRef(null);
 
   const handleClick = (name) => {
     searchYoutube.get('/search', {
       params: {
-        q: `${name} Stretch`
+        q: `${name} ${activity}`
       }
     })
       .then((data) => {
