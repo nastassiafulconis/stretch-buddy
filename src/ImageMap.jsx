@@ -13,7 +13,8 @@ const MapTest = () => {
       }
     })
       .then(({data}) => {
-        ref.current.openModal(data.items[0].id.videoId);
+        console.log(data);
+        ref.current.openModal(data.items[0]);
       })
       .catch((err) => {
         console.error(`error getting data from api: ${err}`);

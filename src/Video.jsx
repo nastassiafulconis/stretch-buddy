@@ -18,9 +18,12 @@ Modal.setAppElement('#app');
 const Video = forwardRef(({name}, ref) => {
   const [modalIsOpen,setIsOpen] = useState(false);
   const [video,setVideo] = useState('hello');
+  const [title,setTitle] = useState('testing');
 
-  const openModal = (videoId) => {
-    setVideo(videoId);
+  const openModal = (video) => {
+    setVideo(video.id.videoId);
+    const name = video.snippet.title.split(' ')[0]
+    setTitle(name);
     setIsOpen(true);
   }
 
@@ -38,7 +41,7 @@ const Video = forwardRef(({name}, ref) => {
       <Fragment>
         <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Modal" style={customStyles}>
           <button onClick={closeModal} className="close-modal">X</button>
-          <h2>{name} Stretch</h2>
+          <h2>{title} Stretch</h2>
           <iframe
           className="embed-responsive-item"
           src={`https://www.youtube.com/embed/${video}`}
