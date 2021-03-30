@@ -15,9 +15,12 @@ const customStyles = {
 
 Modal.setAppElement('#app');
 
-const Video = forwardRef((props, ref) => {
+const Video = forwardRef(({name}, ref) => {
   const [modalIsOpen,setIsOpen] = useState(false);
-  const openModal = () => {
+  const [video,setVideo] = useState('hello');
+
+  const openModal = (videoId) => {
+    setVideo(videoId);
     setIsOpen(true);
   }
 
@@ -35,7 +38,11 @@ const Video = forwardRef((props, ref) => {
       <Fragment>
         <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Modal" style={customStyles}>
           <button onClick={closeModal} className="close-modal">X</button>
-          <div>Test</div>
+          <h2>{name}</h2>
+          <iframe
+          className="embed-responsive-item"
+          src={`https://www.youtube.com/embed/${video}`}
+          allowFullScreen></iframe>
         </Modal>
       </Fragment>
     );

@@ -5,7 +5,7 @@ const App = () => {
   return (
     <React.Fragment>
       <h1>Welcome to Stretch Buddy!</h1>
-      <Body />
+      <Body q="Hand Stretch"/>
     </ React.Fragment>
   );
 };
