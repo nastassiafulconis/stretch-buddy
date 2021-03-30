@@ -4,7 +4,6 @@ body {
 
 .background {
   display: block;
-  /* width: 80%; */
   margin-right: auto;
   margin-left: auto;
 }
@@ -20,11 +19,6 @@ button:hover {
 button {
   position: absolute;
   top: 90%
-}
-
-.test-area {
-  color: red;
-  border: 10px solid red;
 }
 
 .close-modal {

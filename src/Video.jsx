@@ -9,7 +9,7 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
   }
 };
 
@@ -39,7 +39,7 @@ const Video = forwardRef(({name}, ref) => {
 
     return (
       <Fragment>
-        <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Modal" style={customStyles}>
+        <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Modal" style={customStyles} portalClassName="modal">
           <button onClick={closeModal} className="close-modal">X</button>
           <h2>{title} Stretch</h2>
           <iframe
