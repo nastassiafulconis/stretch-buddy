@@ -1,6 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import ImageMap from './ImageMap.jsx';
 import Nav from './Nav.jsx';
+import Toggle from './Toggle.jsx';
 
 const App = () => {
   const [activity, setActivity] = useState('Stretch');
@@ -18,8 +19,9 @@ const App = () => {
 
   return (
     <Fragment>
-      <Nav activity={activity} inActivity={inActivity} handleActivityChange={handleActivityChange}/>
+      <Nav activity={activity} />
       <ImageMap activity={activity}/>
+      <Toggle inActivity={inActivity} handleActivityChange={handleActivityChange}/>
     </ Fragment>
   );
 };

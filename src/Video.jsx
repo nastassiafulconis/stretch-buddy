@@ -13,7 +13,7 @@ const customStyles = {
     width: '50%',
     height: '50%',
     borderRadius: '20px',
-    boxShadow: '0.5px 0.5px 5px gray'
+    boxShadow: '0.5px 0.5px 5px gray',
   }
 };
 
@@ -25,6 +25,8 @@ const Video = forwardRef(({name}, ref) => {
   const [title,setTitle] = useState('testing');
 
   const openModal = (videoId, name) => {
+    const first = name.charAt(0).toUpperCase();
+    name = first + name.slice(1, name.length);
     setVideo(videoId);
     setTitle(name);
     setIsOpen(true);

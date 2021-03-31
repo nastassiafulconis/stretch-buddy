@@ -2,7 +2,7 @@ import React, {useRef, useState} from 'react';
 import searchYoutube from './utils/searchYoutube.js';
 import Video from './Video.jsx';
 
-const Nav = ({handleActivityChange, activity, inActivity}) => {
+const Nav = ({activity}) => {
   const ref = useRef(null);
 
   const [query, setQuery] = useState('');
@@ -31,10 +31,9 @@ const Nav = ({handleActivityChange, activity, inActivity}) => {
 
   return (
     <nav id="nav">
-      <h1>Welcome to {activity} Buddy!</h1>
-      <button onClick={handleActivityChange} className="test">I want to {inActivity} instead</button>
+      <h1>Welcome to {activity} Buddy</h1>
       <form id='search-form' onSubmit={handleSearch}>
-        <input placeholder='enter a body part' aria-label="activity search" id='search-bar' value={query} onChange={onChange}></input>
+        <input placeholder=' enter a body part' aria-label="activity search" id='search-bar' value={query} onChange={onChange}></input>
         <button aria-label="search for product" form='search-form' id="search-icon" type='submit'><i className="fas fa-search"></i></button>
       </form>
       <Video ref={ref} />
