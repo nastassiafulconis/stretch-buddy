@@ -14,11 +14,6 @@ body {
   margin-top: 12vh;
 }
 
-input {
-  border: none;
-  text-transform: capitalize;
-}
-
 #nav {
   position: absolute;
   height: 7vh;
