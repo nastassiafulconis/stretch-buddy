@@ -1,9 +1,10 @@
 import React, {Fragment, useState} from 'react';
 import ImageMap from './ImageMap.jsx';
+import Nav from './Nav.jsx';
 
 const App = () => {
-  const [activity,setActivity] = useState('Stretch');
-  const [inActivity,setInActivity] = useState('Workout');
+  const [activity, setActivity] = useState('Stretch');
+  const [inActivity, setInActivity] = useState('Workout');
 
   const handleActivityChange = () => {
     if (activity === 'Stretch') {
@@ -17,9 +18,8 @@ const App = () => {
 
   return (
     <Fragment>
-      <h1>Welcome to {activity} Buddy!</h1>
+      <Nav activity={activity} inActivity={inActivity} handleActivityChange={handleActivityChange}/>
       <ImageMap activity={activity}/>
-      <button onClick={handleActivityChange}>I want to {inActivity}</button>
     </ Fragment>
   );
 };

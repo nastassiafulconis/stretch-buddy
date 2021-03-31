@@ -9,17 +9,26 @@ body {
   margin-left: auto;
 }
 
+#nav {
+  height: 8vh;
+  background-color: #525252;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+  width: 98%;
+}
+
 h1 {
   text-align: center;
 }
 
 button:hover {
   cursor: pointer;
-}
-
-button {
-  position: absolute;
-  top: 90%
 }
 
 .close-modal {
@@ -32,3 +41,4 @@ button {
   right: 1%;
   font-size: 20px;
 }
+
