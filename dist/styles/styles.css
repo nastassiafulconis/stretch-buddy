@@ -9,6 +9,10 @@ body {
   margin-left: auto;
 }
 
+input {
+  border: none;
+}
+
 #nav {
   height: 8vh;
   background-color: #525252;
@@ -17,10 +21,41 @@ body {
   align-items: center;
   justify-content: space-between;
   color: white;
-  text-decoration: none;
   padding: 1rem;
   font-size: 1.5rem;
   width: 98%;
+}
+
+#search-bar, #search-icon {
+  background-color: transparent;
+  outline: none;
+  line-height: 18px;
+  color: white;
+  border-radius: 20px;
+  padding: 5px;
+  font-size: 100%;
+  border: 2px solid white;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+}
+
+#search-form {
+  border: 2px solid transparent;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+}
+
+#search-icon {
+  border: none;
+  margin-left: 10px;
+}
+
+#search-form:focus, #search-form:hover, #search-bar:focus, #search-bar:hover {
+  border-color: transparent;
+}
+
+#search-form:hover, #search-form:focus-within {
+  border-bottom: 2px solid white;
 }
 
 h1 {
@@ -41,4 +76,3 @@ button:hover {
   right: 1%;
   font-size: 20px;
 }
-

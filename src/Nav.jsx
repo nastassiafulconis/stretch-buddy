@@ -32,10 +32,10 @@ const Nav = ({handleActivityChange, activity, inActivity}) => {
   return (
     <nav id="nav">
       <h1>Welcome to {activity} Buddy!</h1>
-      <button onClick={handleActivityChange}>I want to {inActivity} instead</button>
+      <button onClick={handleActivityChange} className="test">I want to {inActivity} instead</button>
       <form id='search-form' onSubmit={handleSearch}>
-        <input placeholder='enter a body part' aria-label="activity search" className='search-bar' value={query} onChange={onChange}></input>
-        <button aria-label="search for product" id='search-form-btn'  form='search-form' type='submit'><i className="fas fa-search"></i></button>
+        <input placeholder='enter a body part' aria-label="activity search" id='search-bar' value={query} onChange={onChange}></input>
+        <button aria-label="search for product" form='search-form' id="search-icon" type='submit'><i className="fas fa-search"></i></button>
       </form>
       <Video ref={ref} />
     </nav>
