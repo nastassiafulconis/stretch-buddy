@@ -29,7 +29,6 @@ const Video = forwardRef(({name}, ref) => {
   const openModal = (videoId, name) => {
     const first = name.charAt(0).toUpperCase();
     name = first + name.slice(1, name.length);
-    console.log('name: ', name, 'videoId: ', videoId)
     setVideo(videoId);
     setTitle(name);
     setIsOpen(true);

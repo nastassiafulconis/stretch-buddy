@@ -1,24 +1,20 @@
 import React, {useRef, Fragment} from 'react';
 import Video from './Video.jsx';
-import searchYoutube from './utils/searchYoutube.js';
 import data from './utils/svg.js';
+import axios from 'axios';
 
 const ImageMap = ({activity}) => {
   const ref = useRef(null);
 
   const handleClick = (name) => {
-    searchYoutube.get('/search', {
-      params: {
-        q: `${name} ${activity}`
-      }
-    })
-      .then((data) => {
-        ref.current.openModal(data.data.items[0].id.videoId, data.config.params.q);
+    axios.get(`/videos/${name} ${activity}`)
+      .then(({data}) => {
+        ref.current.openModal(data[0].videoId, data[0].query);
       })
       .catch((err) => {
-        console.error(`error getting data from api: ${err}`);
+        console.error(`error getting data from server: ${err}`);
       });
-  }
+  };
 
   return (
     <Fragment>
