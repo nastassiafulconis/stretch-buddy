@@ -14,7 +14,8 @@ const customStyles = {
     height: '50%',
     borderRadius: '20px',
     boxShadow: '0.5px 0.5px 5px gray',
-    fontFamily: "'Roboto', sans-serif"
+    fontFamily: "'Roboto', sans-serif",
+    textAlign: 'center'
   }
 };
 
