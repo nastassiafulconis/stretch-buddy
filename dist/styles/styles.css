@@ -63,6 +63,10 @@ body {
   border-bottom: 2px solid white;
 }
 
+#search-form:hover #search-bar {
+  border-color: transparent;
+}
+
 h1 {
   text-align: center;
 }
@@ -109,6 +113,6 @@ button:hover {
 }
 
 #toggle:hover span {
-  font-weight: 800;
+  font-weight: 900;
   font-size: 110%;
 }
