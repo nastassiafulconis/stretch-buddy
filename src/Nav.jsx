@@ -18,7 +18,6 @@ const Nav = ({activity}) => {
       }
     })
       .then((data) => {
-        console.log(data);
         ref.current.openModal(data.data.items[0].id.videoId, data.config.params.q);
       })
       .then(() => {
