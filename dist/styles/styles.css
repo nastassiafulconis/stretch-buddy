@@ -1,5 +1,6 @@
 body {
   height: 500px;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 .background {
@@ -28,5 +29,6 @@ button {
   outline: none;
   position: absolute;
   top: 2%;
-  right: 2%;
+  right: 1%;
+  font-size: 20px;
 }
