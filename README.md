@@ -1,10 +1,14 @@
 # Stretch Buddy
 A stretching and workout tool built on React Hooks, Node.js, and MongoDB using the Youtube API.
 
+---
+
 ## Table of Contents
 - [Install](#install)
 - [Tech Stack](#tech-stack)
 - [Features](#features)
+
+---
 
 ## Install
 
@@ -12,6 +16,8 @@ Set a **TOKEN** environment variable in a .env file or directly in docker-compos
 > Example: TOKEN="Your Youtube API Token"
 
 Run `docker-compose up` and navigate to http://localhost:3000 to see the front-end application.
+
+---
 
 ## Tech Stack
 
@@ -23,6 +29,8 @@ Run `docker-compose up` and navigate to http://localhost:3000 to see the front-e
    * [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
    * [MongoDB](https://www.mongodb.com/)
    * [Youtube API](https://developers.google.com/youtube/v3)
+
+---
 
 ## Features
 
